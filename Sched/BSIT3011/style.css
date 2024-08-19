@@ -1,0 +1,150 @@
+@import url(./master.css);
+
+body{
+    background-image: linear-gradient(34deg, black, rgb(111, 109, 109));
+    min-height: 100vh;
+    color: var(--font-color);
+
+    font-family: 'A750';
+    letter-spacing: 0.1rem;
+}
+
+div-schedule1{
+    background-color: rgb(15, 70, 27);
+
+    display: grid;
+    grid-template-columns: 0.5fr auto;
+    grid-template-rows: 1fr auto;
+    height: fit-content;
+    width: 100vw;
+
+    padding: 1rem;
+}
+section-day{
+    display: flex;
+    flex-direction: row;
+
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+section-time{
+    border: 1px solid rgb(29, 224, 29);
+
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.day{
+    min-width: 13vw;
+    max-width: 13vw;
+    text-align: center;
+    padding: 0.2rem;
+    border: 1px solid white;
+    overflow: hidden;
+}
+.time{
+    padding: 0.2rem;
+    border: 1px solid white;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    min-height: 4rem;
+
+    text-align: center;
+    display: grid;
+    place-content: center;
+}
+
+
+
+section-subjects{
+    border: 1px solid rgb(106, 232, 106);
+
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(6, 13vw);
+}
+
+.subject-day{
+    border: 1px solid white;
+    position: relative;
+}
+
+.subject{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-wrap: wrap;
+    /* mix-blend-mode: difference; */
+
+    height: 200px;
+    width: 13vw;
+    /* background-color: gray; */
+
+    color: white;
+    font-size: 12pt;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@media (max-width: 760px) {
+    body{
+        font-size: 2vw;
+    }
+    .subject{
+        font-size: 2vw;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+    .details{
+        border: 1px white solid;
+    
+        padding: 0;
+        position: absolute;
+        /* mix-blend-mode: normal; */
+        z-index: 20;
+    }
+    .details>*:nth-child(2){
+        font-size: 1.5vw;
+    }
+    .details>*:nth-child(3){
+        font-size: 1vw;
+    }
+}
+
+a{
+    color: white;
+    font-family: monospace;
+    text-decoration: none;
+
+    
+    background-color: rgb(77, 76, 76);
+    border-radius: 6px;
+    font-size: 12pt;
+    text-align: center;
+}
+a:hover{
+    background-color: gray;
+    color: black;
+}
+
+
+
+.details{
+    border: 1px white solid;
+
+    padding: 1rem;
+    position: absolute;
+    /* mix-blend-mode: normal; */
+    z-index: 20;
+}
