@@ -7,9 +7,14 @@
 </head>
 <body>
     <main>
-        <a href="./BSIT3011/index.html">BSIT - 3011</a>
-        <a href="./BSIT3012/index.html">BSIT - 3012</a>
-        <a href="./BSCS3101/index.html">BSCS - 3101</a>
+        <div>
+            <a href="./BSIT3011/index.html">BSIT - 3011</a>
+            <a href="./BSIT3012/index.html">BSIT - 3012</a>
+            <a href="./BSCS3101/index.html">BSCS - 3101</a>
+        </div>
+        <div>
+            <a href="./BSIT3101-2nd/index.html">BSIT - 3202 2nd</a>
+        </div>
     </main>
 </body>
 <style>
@@ -29,16 +34,27 @@
     main{
         background-image: linear-gradient(45deg, black, rgb(61, 59, 59));
 
-        width: 20rem;
-        height: 20rem;
+        width: auto;
+        height: auto;
+        padding: 2rem 5rem;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
         border-radius: 10px;
         font-size: 15pt;
+
+        >div{
+            height: 10rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            border-radius: 10px;
+            font-size: 15pt;
+        }
     }
     a{
         color: white;
